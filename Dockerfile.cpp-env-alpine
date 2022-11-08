@@ -1,0 +1,8 @@
+# Build and run:
+#   docker build -t clion/ubuntu/cpp-env:1.0 -f Dockerfile.cpp-env-alpine .
+
+
+FROM alpine:3.16.2
+
+RUN apk add --update gcc g++ clang gdb cmake make ninja autoconf automake dos2unix tar rsync python3 \
+    && rm -rf /tmp/* /var/cache/apk/*
